@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clips in 4 — Los Angeles Clippers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Orbitron:wght@600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#overview" aria-label="Clips in 4 home">
+          <span class="brand-mark" aria-hidden="true"><i>C</i><b>4</b></span>
+          <span class="brand-name">CLIPS<br /><em>IN 4</em></span>
+        </a>
+        <nav class="primary-nav" aria-label="Main navigation">
+          <a class="nav-link active" href="#overview"><span class="nav-icon">⌂</span>Overview</a>
+          <a class="nav-link" href="#roster"><span class="nav-icon">♙</span>Roster</a>
+          <a class="nav-link" href="#schedule"><span class="nav-icon">▣</span>Schedule</a>
+          <a class="nav-link" href="#stats"><span class="nav-icon">◫</span>Stats</a>
+          <a class="nav-link" href="#news"><span class="nav-icon">◉</span>News &amp; Social</a>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="season-pill"><span></span> 2026–27 SEASON</div>
+          <p>Snapshot updated Nov 19, 2026. Refresh this data source daily.</p>
+          <button class="dark-button" id="refreshButton">↻ Refresh data</button>
+        </div>
+      </aside>
+
+      <main>
+        <header class="topbar">
+          <div class="crumb"><span class="live-dot"></span> TEAM TRACKER <span>/</span> <strong>OVERVIEW</strong></div>
+          <div class="topbar-actions">
+            <button class="icon-button" id="searchButton" aria-label="Search players">⌕</button>
+            <button class="icon-button notification" id="notificationButton" aria-label="Notifications">♧<b></b></button>
+            <button class="avatar" id="accountButton" aria-label="Dashboard preferences">MK</button>
+          </div>
+        </header>
+
+        <section class="hero" id="overview">
+          <div>
+            <p class="eyebrow">LOS ANGELES CLIPPERS</p>
+            <h1>KEEP UP WITH<br /><em>YOUR</em> TEAM.</h1>
+            <p class="hero-copy">Everything Clippers, in one place. Follow the action, the numbers, and the voices around the team.</p>
+          </div>
+          <div class="record-card">
+            <p>2026–27 RECORD</p>
+            <strong>4 <span>—</span> 9</strong>
+            <div><span>13TH</span> WESTERN CONFERENCE <b>7.5 GB</b></div>
+          </div>
+        </section>
+
+        <section class="content-grid">
+          <div class="left-column">
+            <article class="game-card" id="schedule">
+              <div class="section-heading">
+                <div><p class="eyebrow">NEXT GAME</p><h2>GAME NIGHT</h2></div>
+                <button class="text-button" id="scheduleButton">Full schedule <span>→</span></button>
+              </div>
+              <div class="game-date"><button id="previousGame" aria-label="Previous game">←</button><span id="gameDate">THU, NOV 19 <i>•</i> 5:00 PM PT</span><button id="nextGame" aria-label="Next game">→</button></div>
+              <div class="matchup">
+                <div class="team-block clippers"><div class="team-logo">LA</div><strong>CLIPPERS</strong><small id="clippersGameRecord">4–9 · 13th West</small></div>
+                <div class="versus"><b id="gameConnector">AT</b><span id="gameVenue">FROST BANK CENTER</span><small id="gameLocation">SAN ANTONIO, TX</small></div>
+                <div class="team-block spurs"><div class="team-logo" id="opponentLogo">SAS</div><strong id="opponentName">SPURS</strong><small id="opponentRecord">12–3 · 2nd West</small></div>
+              </div>
+              <div class="broadcast"><span>WATCH</span> KTLA · CLIPPERVISION <i></i> <span>LISTEN</span> AM 570 / 1330 AM <button class="reminder" id="reminderButton">＋ Set reminder</button></div>
+            </article>
+
+            <section class="lineup-section">
+              <div class="section-heading lineup-heading">
+                <div><p class="eyebrow">PROJECTED</p><h2>TONIGHT'S STARTERS</h2></div>
+                <div class="toggle"><button class="active" data-lineup="starters">STARTERS</button><button data-lineup="bench">BENCH</button></div>
+              </div>
+              <div class="lineup-grid" id="lineupGrid"></div>
+              <p class="update-note"><span>↻</span> Projected Nov 19 · Subject to coach's decision</p>
+            </section>
+
+            <section class="leader-section" id="stats">
+              <div class="section-heading"><div><p class="eyebrow">2026–27 REGULAR SEASON</p><h2>TEAM LEADERS</h2></div><button class="text-button" id="statsButton">All stats <span>→</span></button></div>
+              <div class="leader-grid">
+                <article class="leader-card"><span>POINTS</span><strong>21.2</strong><div><b>Darius Garland</b><small>PPG · Through Nov 18</small></div><div class="mini-bar"><i style="width:78%"></i></div></article>
+                <article class="leader-card"><span>REBOUNDS</span><strong>5.9</strong><div><b>Rui Hachimura</b><small>RPG · Through Nov 18</small></div><div class="mini-bar"><i style="width:61%"></i></div></article>
+                <article class="leader-card"><span>ASSISTS</span><strong>6.9</strong><div><b>Darius Garland</b><small>APG · Through Nov 18</small></div><div class="mini-bar"><i style="width:72%"></i></div></article>
+              </div>
+            </section>
+            <section class="roster-section" id="roster">
+              <div class="section-heading"><div><p class="eyebrow">2026–27 ROSTER</p><h2>PLAYER DIRECTORY</h2></div><span class="roster-date">AS OF NOV 19</span></div>
+              <div class="roster-table-wrap"><table class="roster-table"><thead><tr><th>PLAYER</th><th>POS</th><th>HT / WT</th><th>EXP</th><th>STATUS</th></tr></thead><tbody id="rosterTable"></tbody></table></div>
+              <p class="update-note">Tap a player card above for a quick profile. Two-way players are marked <strong>TW</strong>.</p>
+            </section>
+          </div>
+
+          <aside class="right-column">
+            <section class="panel standings-panel">
+              <div class="panel-title"><h3>WESTERN CONFERENCE</h3><button id="standingsMenu" aria-label="More standings">•••</button></div>
+              <div class="standings-head"><span>TEAM</span><span>W</span><span>L</span><span>GB</span></div>
+              <div class="standing-row"><b>1</b><span class="mini-logo lal">LAL</span><strong>Lakers</strong><i>13</i><i>3</i><i>—</i></div>
+              <div class="standing-row"><b>2</b><span class="mini-logo spurs">SAS</span><strong>Spurs</strong><i>12</i><i>3</i><i>0.5</i></div>
+              <div class="standing-row"><b>3</b><span class="mini-logo okc">OKC</span><strong>Thunder</strong><i>8</i><i>5</i><i>4.0</i></div>
+              <div class="standing-row"><b>4</b><span class="mini-logo hou">HOU</span><strong>Rockets</strong><i>8</i><i>6</i><i>4.5</i></div>
+              <div class="standing-row"><b>5</b><span class="mini-logo den">DEN</span><strong>Nuggets</strong><i>8</i><i>6</i><i>4.5</i></div>
+              <div class="standing-row selected"><b>13</b><span class="mini-logo lac">LAC</span><strong>Clippers</strong><i>4</i><i>9</i><i>7.5</i></div>
+              <button class="panel-footer" id="standingsButton">View full standings <span>→</span></button>
+            </section>
+
+            <section class="panel form-panel">
+              <div class="panel-title"><h3>RECENT FORM</h3><span class="record">1–3 LAST 4</span></div>
+              <div class="form-list">
+                <div><span class="result loss">L</span><b>at UTA</b><strong>107–132</strong></div>
+                <div><span class="result win">W</span><b>vs CHA</b><strong>113–105</strong></div>
+                <div><span class="result win">W</span><b>vs OKC</b><strong>113–112</strong></div>
+                <div><span class="result loss">L</span><b>at NOP</b><strong>105–118</strong></div>
+              </div>
+            </section>
+
+            <section class="panel news-panel" id="news">
+              <div class="panel-title"><h3>FROM THE BEAT</h3><button class="filter-button" id="newsFilter">ALL POSTS⌄</button></div>
+              <div class="post"><div class="post-head"><div class="writer-avatar blue">RF</div><div><b>Robert Flom</b><span>213 Hoops</span></div><small>Today</small></div><p>Yanic Konan Niederhäuser is active after being cleared to return, adding a needed big for the matchup with San Antonio.</p><div class="post-meta">GAME PREVIEW · NOV 19</div></div>
+              <div class="post"><div class="post-head"><div class="writer-avatar orange">OY</div><div><b>Ohm Youngmisuk</b><span>ESPN / Clippers</span></div><small>Nov 18</small></div><p>Darius Garland scored 20 points with seven assists in the loss at Utah; he enters tonight leading LA in scoring and assists.</p><div class="post-meta">PLAYER UPDATE · NOV 18</div></div>
+              <button class="panel-footer" id="newsButton">See all Clippers news <span>→</span></button>
+            </section>
+          </aside>
+        </section>
+      </main>
+    </div>
+    <div class="quick-panel search-panel" id="searchPanel" hidden>
+      <div class="panel-popover" role="dialog" aria-modal="true" aria-labelledby="searchTitle">
+        <div class="popover-heading"><h3 id="searchTitle">FIND A CLIPPER</h3><button class="close-button" data-close="searchPanel" aria-label="Close search">×</button></div>
+        <input id="playerSearch" type="search" autocomplete="off" placeholder="Search roster by player name" />
+        <div id="searchResults" class="search-results"></div>
+      </div>
+    </div>
+    <div class="quick-panel notification-panel" id="notificationPanel" hidden>
+      <div class="panel-popover notification-popover" role="dialog" aria-modal="true" aria-labelledby="noticeTitle">
+        <div class="popover-heading"><h3 id="noticeTitle">DASHBOARD UPDATES</h3><button class="close-button" data-close="notificationPanel" aria-label="Close notifications">×</button></div>
+        <p><b>Game night</b><br />Clippers at Spurs tips at 5:00 PM PT.</p><p><b>Roster report</b><br />Yanic Konan Niederhäuser has been cleared to return.</p><button class="preference-button" id="markReadButton">Mark all as read</button>
+      </div>
+    </div>
+    <div class="quick-panel account-panel" id="accountPanel" hidden>
+      <div class="panel-popover account-popover" role="dialog" aria-modal="true" aria-labelledby="accountTitle">
+        <div class="popover-heading"><h3 id="accountTitle">DASHBOARD SETTINGS</h3><button class="close-button" data-close="accountPanel" aria-label="Close settings">×</button></div>
+        <p>Personalize your game-night view.</p><label class="switch-row"><span>Game-day alerts</span><input id="alertToggle" type="checkbox" checked /><i></i></label>
+      </div>
+    </div>
+    <div class="quick-panel player-modal" id="playerModal" hidden>
+      <div class="panel-popover player-popover" role="dialog" aria-modal="true" aria-labelledby="playerModalName">
+        <button class="close-button modal-close" data-close="playerModal" aria-label="Close player profile">×</button>
+        <div id="playerModalContent"></div>
+      </div>
+    </div>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
